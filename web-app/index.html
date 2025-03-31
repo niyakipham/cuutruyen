@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuuTruyen Reader</title>
+  <meta name="theme-color" content="#0f0f15">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-content">
+        <h1>CuuTruyen</h1>
+        <div class="actions">
+          <button id="syncBtn" class="icon-btn" title="Sync with extension">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button id="themeBtn" class="icon-btn" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <main class="app-main">
+      <div class="comic-list">
+        <!-- Comics will be loaded here -->
+      </div>
+      
+      <div class="comic-detail hidden">
+        <div class="detail-header">
+          <button id="backBtn" class="icon-btn">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <h2 class="comic-title"></h2>
+        </div>
+        
+        <div class="comic-cover-container">
+          <img class="comic-cover" src="" alt="Comic cover">
+          <div class="comic-meta">
+            <p class="comic-author"></p>
+            <p class="comic-status"></p>
+            <p class="comic-genres"></p>
+          </div>
+        </div>
+        
+        <div class="comic-description"></div>
+        
+        <div class="chapter-list-container">
+          <h3>Chapters</h3>
+          <div class="chapter-list">
+            <!-- Chapters will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="app-footer">
+      <p>CuuTruyen Reader © 2023</p>
+    </footer>
+  </div>
+  
+  <div class="loading-overlay hidden">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Syncing data...</p>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
