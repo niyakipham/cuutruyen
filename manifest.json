@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "CuuTruyen Data Extractor",
+  "version": "1.0",
+  "description": "Extract comic data from cuutruyen.net with modern UI",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "popup/icons/icon16.png",
+      "32": "popup/icons/icon32.png",
+      "48": "popup/icons/icon48.png",
+      "128": "popup/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "popup/icons/icon16.png",
+    "32": "popup/icons/icon32.png",
+    "48": "popup/icons/icon48.png",
+    "128": "popup/icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://cuutruyen.net/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
